@@ -1,6 +1,7 @@
 pipeline {
     agent any
     environment {
+        IMG = "rishiraj12223/devops-project"
         IMAGE_NAME = "rishiraj12223/devops-project${BUILD_NUMBER}"
         GIT_REPO = "https://github.com/Rishi3322/Quiz-website.git"
         GIT_BRANCH = "main"
@@ -28,7 +29,7 @@ pipeline {
         }
         stage('Clear Image'){
             steps {
-                sh "sudo docker rmi ${IMAGE_NAME}${BUILD_NUMBER.toInteger()-1}"
+                sh "sudo docker rmi ${IMG}${BUILD_NUMBER.toInteger()-1}"
             }
         }
     }
