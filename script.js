@@ -1,6 +1,6 @@
 const quizData = [
     {
-        question: "  language runs in a web browser?",
+        question: " Which language runs in a web browser?",
         a: "Java",
         b: "C",
         c: "Python",
